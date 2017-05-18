@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0" />
+		<title>飞机游戏</title>
+		<link rel="stylesheet" href="css/app.css" media="all" />
+
+		<!--工具对象-->
+		<script src="js/resource.js"></script>
+		<script src="js/Preload.js"></script>
+
+		<!--页面对象-->
+		<script src="js/LoadingPage.js"></script>
+		<script src="js/StartPage.js"></script>
+		<script src="js/GamePage.js"></script>
+
+		<!--游戏对象-->
+		<script src="js/Plane.js"></script>
+		<script src="js/Stage1.js"></script>
+		<script src="js/Game.js"></script>
+
+		<!--入口-->
+		<script src="js/app.js"></script>
+	</head>
+
+	<body>
+		<div class="container">
+			<div id="p0" class="page">
+				<div id="loading">0%</div>
+			</div>
+
+			<div id="p1" class="page">
+				<button id="btnStart">开始游戏</button>
+			</div>
+
+			<div id="p2" class="page">
+				<span id="frames">0</span>
+			</div>
+		</div>
+	</body>
+
+</html>

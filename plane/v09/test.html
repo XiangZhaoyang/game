@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			html,body{
+				height: 100%;
+			}
+		</style>
+	</head>
+
+	<body onclick="fnClick(event)">
+		<a onclick="fnClick(event)" href="http://sohu.com">sohu</a>
+		<button onclick="fnClick(event)">buttton</button>
+		<script>
+			function fnClick(e) {
+				console.log("clcik", e, e.target);
+				e.preventDefault();
+				e.stopPropagation();
+			}
+		</script>
+
+	</body>
+
+</html>

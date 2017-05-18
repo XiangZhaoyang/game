@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>知识体系</title>
+	</head>
+
+	<body>
+		<pre>
+			1.对象封装和使用
+			2.&& 与& 的区别
+		</pre>
+
+		<script>
+			//1.对象封装
+
+			function Person(name, age) {
+				//1.普通属性
+				this.name = name;
+				this.age = age;
+
+				//2.方法属性
+				this.show = function() {
+					console.log("i'am %s", this.name);
+				}
+
+				//3.事件属性:方法比较：延后赋值
+				this.ongrow;
+
+				this.add = function() {
+					this.age++;
+
+					if(this.ongrow) {
+						this.ongrow(this.age);
+					}
+				}
+			}
+
+			//2.使用对象
+
+			var person = new Person("tom", 18);
+			person.name = "mike";
+			console.log("name:%s age:%d", person.name, person.age);
+
+			person.show();
+
+			person.ongrow=function(age){
+				//console.log("又长了一岁");
+				console.log("生日快乐 %d",age);
+			}
+			person.add()
+			
+			
+			var mary=new Person("mary",18);
+			mary.ongrow=function(){
+				console.log("要买礼物了哟")
+			}
+			mary.add();
+		</script>
+		
+		<script>
+			function t0(){
+				console.log(0);
+				return 0;
+			}
+			function t1(){
+				console.log(1);
+				return 1;
+			}
+			function t2(){
+				console.log(2);
+				return 2;
+			}
+			
+//			var bool=t0() && t1();
+			var bool=t0() & t1();
+			console.log("bool",bool);
+		</script>
+	</body>
+
+</html>
